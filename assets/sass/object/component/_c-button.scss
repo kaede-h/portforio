@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* ! ==================================================
+
+- ボタン
+- ボタンエリア
+
+================================================== */
+/* ! --------------------------------------------------
+
+- ボタン
+
+-------------------------------------------------- */
+.c-button {
+	@extend %c-text__lv6;
+	@extend %c-text__weight--400;
+  border: 1px solid #fff;
+	background: color("background_blue");
+	color: color("text_white");
+	cursor: pointer;
+  padding: 15px 25px;
+	min-width: 200px;
+	width: auto;
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  @include mq(sp){
+    font-weight: 600 !important;
+    padding: 16px 0;
+  }
+  &:hover{
+	  opacity: 0.6;
+  }
+  //フル
+  &--full {
+    width: 100%;
+  }
+	//高さ
+  &--heightLarge {
+	  height: 50px;
+  }
+
+  //最新
+  //サイズ
+  &--large {
+    padding: 25px 25px;
+    min-width: 320px;
+  }
+
+  //height
+  &--heightregular {
+	  height: 45px;
+  }
+  //while
+  &--while {
+	  margin: 0 40px;
+    @include mq(tablet){
+      margin: 0;
+    }
+  }
+  //color
+  &--grayDark {
+	  color: color("text_white");
+	  background: color("background_grayDark");
+  }
+  &--gray {
+	  color: color("text_white");
+	  background: color("background_gray");
+  }
+
+
+  //block
+  &--block {
+	  display: inline-block;
+  }
+
+}
+
+

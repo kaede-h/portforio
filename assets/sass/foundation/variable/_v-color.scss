@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* ! ==================================================
+
+- カラー
+
+================================================== */
+/* ! --------------------------------------------------
+
+- カラー
+
+-------------------------------------------------- */
+$colorList: (
+/*
+  'main': #2F58AC,
+  'sub': #153576, 
+  'accent': #E39E1A, 
+  'action': #2F58AC, 
+*/
+  'background': #000,
+  'background_white': #fff, 
+  'background_blue': #1C69D4,
+  'background_gray': #e4e4e4,
+  'background_grayDark': #4A4A4A,
+  //テキスト
+  'text': #000,
+  'text_blue': #1D4E90,
+  'text_thinBlue': #3492B4,
+  'text_white': #FFF,
+  'text_gray': #e4e4e4,
+  'text_black': #000,
+  'text_error': #E81C1C,
+  'text_red': #D11111,
+) !default;
+@function color($colorName) {
+  @return #{map-get($colorList, $colorName)}
+}
+

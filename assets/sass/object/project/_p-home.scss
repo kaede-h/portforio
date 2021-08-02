@@ -1,0 +1,276 @@
+@charset "UTF-8";
+// @font-face {
+// 	font-family: 'BMWTypeNextLatinTT-Bold';
+// 	src: url("../fonts/BMWTypeNextLatinTT-Bold.woff") format("woff");
+//   src: url("../fonts/BMWTypeNextLatin-Bold.woff2") format("woff2");
+// 	font-weight: bold;
+// }
+// @font-face {
+//   font-family: "BMWTypeNextLatinTT-Light";
+//   src: url("../fonts/BMWTypeNextLatinTT-Light.woff") format("woff");
+//   src: url("../fonts/BMWTypeNextLatin-Light.woff2") format("woff2");
+// }
+// @font-face {
+//   font-family: "BMWTypeNextLatinTT-Regular";
+//   src: url("../fonts/BMWTypeNextLatinTT-Regular.woff") format("woff");
+//   src: url("../fonts/BMWTypeNextLatin-Regular.woff2") format("woff2");
+// }  
+// @font-face {
+//   font-family: "BMWTypeNextLatinTT-Thin";
+//   src: url("../fonts/BMWTypeNextLatinTT-Thin.woff") format("woff");
+//   src: url("../fonts/BMWTypeNextLatin-Thin.woff2") format("woff2");
+// }  
+/* ! --------------------------------------------------
+-------------------------------------------------- */
+
+.p-home {
+	//トップビュー 
+	&__view {
+  height: 750px;
+  background: url(../image/top_view.jpg) no-repeat center center !important;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  @include mq(note){
+    height: 620px;
+  }
+  @include mq(tablet){
+    height: 520px;
+  }
+  @include mq(sp){
+    height: 450px;
+  }
+    .c-text{
+      text-align: center;
+      .title{
+        color: color("text_white");
+        @extend %c-text__lv1;
+        @extend %c-text__weight--600;
+      }
+      .name{
+        padding: 0 16px;
+        text-align: center;
+        border: 1px solid #fff;
+        color: color("text_white");
+        @extend %c-text__lv5;
+        @extend %c-text__weight--400;
+      }
+    }
+    .c-image{
+      margin: 16px 0 0;
+    }
+	}
+  //プロフィール 
+	&__profile {
+    background: #F7F7F7;
+    padding: 64px 0 56px;
+    @include mq(tablet){
+      padding: 42px 0 48px;
+    }
+    @include mq(sp){
+      padding: 32px 0 36px;
+    }
+    &__heading {
+      text-align: center;
+      .c-image{
+        display: flex;
+        justify-content: center;
+        img{
+          @include mq(tablet){
+            height: 100px;
+            width: 100px;
+          }
+          @include mq(sp){
+            height: 86px;
+            width: 86px;
+          }
+        }
+      }
+      .title{
+        margin: 32px 0 0;
+        @extend %c-text__lv3;
+        @extend %c-text__weight--600;
+        @include mq(tablet){
+          margin: 10px 0 0;
+        }
+      }
+      .name{
+        @extend %c-text__lv6;
+      }
+    }
+    &__body {
+      margin: 24px 0 0;
+      @extend %c-text__lv7;
+      @include mq(tablet){
+        margin: 18px 0 0;
+      }
+      .description{
+        p{
+          color: #656565;
+          @extend %c-text__lv7;
+        }
+      }
+    }
+  }
+  //架空サイト
+  &__fictitious {
+    margin: 100px 0 0;
+    @include mq(tablet){
+      margin: 56px 0 0;
+    }  
+    &__heading {
+      .text{
+        position: relative;
+        .title{
+          @extend %c-text__lv4;
+          @extend %c-text__weight--500;
+          strong{
+            @extend %c-text__lv2;
+            @extend %c-text__weight--500;
+          }
+        }
+        &:after{
+          content: "";
+          background: #03314A;
+          width: 80%;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          margin: 0 0 0 10px;
+          right: -24px;
+          @include mq(note){
+            width: 72%;
+          }
+          @include mq(spWide){
+            width: 64%;
+          }
+          @include mq(sp){
+            width: 54%;
+            right: 0;
+          }
+          @include mq(spHalf){
+            width: 46%;
+          }
+        }  
+      }
+    }
+    &__body {
+      margin: 64px 0 0;
+      @include mq(tablet){
+        margin: 32px 0 0;
+      }
+      //リスト
+      .list_work{
+        display: flex;
+        flex-flow: wrap;
+        margin: -16px;
+        @include mq(tablet){
+          margin: -10px;
+        }
+        @include mq(sp){
+          margin: -5px;
+        }  
+        >li{
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          padding: 16px;
+          @include mq(tablet){
+            width: 33.3333%;
+            padding: 10px;
+          }
+          @include mq(sp){
+            width: 50%;
+            padding: 5px;
+          }
+          .c-image{
+            cursor: pointer;
+            border: 1px solid #ddd;
+            &:hover{
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+  //私の仕事
+  &__work {
+    margin: 100px 0 200px;
+    &__heading {
+      .text{
+        position: relative;
+        .title{  
+          @extend %c-text__lv4;
+          @extend %c-text__weight--500;
+          strong{
+            @extend %c-text__lv2;
+            @extend %c-text__weight--500;
+          }
+        }
+        &:after{
+          content: "";
+          background: #03314A;
+          width: 86%;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          margin: 0 0 0 10px;
+          right: -26px;
+          @include mq(note){
+            width: 80%;
+          }
+          @include mq(spWide){
+            width: 75%;
+          }
+          @include mq(sp){
+            width: 64%;
+            right: 0;
+          }
+          @include mq(spHalf){
+            width: 56%;
+          }
+        }
+      }
+    }
+    &__body {
+      margin: 64px 0 0;
+      //リスト
+      .list_work{
+        display: flex;
+        flex-flow: wrap;
+        margin: -16px;
+        @include mq(tablet){
+          margin: -10px;
+        }
+        @include mq(sp){
+          margin: -5px;
+        }  
+        >li{
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          padding: 16px;
+          @include mq(tablet){
+            width: 33.3333%;
+            padding: 10px;
+          }
+          @include mq(sp){
+            width: 50%;
+            padding: 5px;
+          }
+          .c-image{
+            cursor: pointer;
+            border: 1px solid #ddd;
+            &:hover{
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }    
+}
+
