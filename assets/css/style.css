@@ -4751,6 +4751,8 @@ html.remodal-is-locked {
 }
 
 .remodal-is-initialized {
+  max-height: calc(110vh - 150px);
+  overflow-y: auto;
   /* Disable Anti-FOUC */
   display: inline-block;
   border: 1px solid #000;
