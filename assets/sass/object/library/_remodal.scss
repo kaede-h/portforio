@@ -85,6 +85,7 @@ html.remodal-is-locked {
 }
 
 .remodal-is-initialized {
+  position: relative;
   max-height: calc(110vh - 150px);
   overflow-y: auto;
   /* Disable Anti-FOUC */
@@ -92,7 +93,26 @@ html.remodal-is-locked {
   border: 1px solid #000;
   border-radius: 0;
 }
-
+.remodal-is-initialized {
+  .c-button{
+    z-index: 1;
+    border: none;
+    position: absolute;
+    right: -60px;
+    top: 10px;
+    cursor: pointer;
+    @include mq(sp){
+      right: -75px;
+      top: 0px;
+    }
+    img{
+      height: 20px;
+      @include mq(sp){
+        height: 16px;
+      }
+    }
+  }
+}
 .p-remodal {
   max-height: 100%;
   margin: 0 auto;

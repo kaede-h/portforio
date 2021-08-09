@@ -3390,7 +3390,6 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 -------------------------------------------------- */
 .c-button {
   border: 1px solid #fff;
-  background: #1C69D4;
   color: #FFF;
   cursor: pointer;
   padding: 15px 25px;
@@ -4338,6 +4337,11 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 .p-home__work__body {
   margin: 64px 0 0;
 }
+@media screen and (max-width: 768px) {
+  .p-home__work__body {
+    margin: 32px 0 0;
+  }
+}
 .p-home__work__body .list_work {
   display: flex;
   flex-flow: wrap;
@@ -4399,14 +4403,6 @@ Object [サイト全体で再利用できるパターンを持つモジュール
   align-items: center;
   position: relative;
   position: relative;
-}
-.p-modal__heading .text .title:after {
-  content: "";
-  background-color: #222A36;
-  width: 80px;
-  height: 2px;
-  border-radius: 10px;
-  margin: 6px 0 0;
 }
 .p-modal__heading .text .description {
   margin: 20px 0 0;
@@ -4751,12 +4747,36 @@ html.remodal-is-locked {
 }
 
 .remodal-is-initialized {
+  position: relative;
   max-height: calc(110vh - 150px);
   overflow-y: auto;
   /* Disable Anti-FOUC */
   display: inline-block;
   border: 1px solid #000;
   border-radius: 0;
+}
+
+.remodal-is-initialized .c-button {
+  z-index: 1;
+  border: none;
+  position: absolute;
+  right: -60px;
+  top: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .remodal-is-initialized .c-button {
+    right: -75px;
+    top: 0px;
+  }
+}
+.remodal-is-initialized .c-button img {
+  height: 20px;
+}
+@media screen and (max-width: 480px) {
+  .remodal-is-initialized .c-button img {
+    height: 16px;
+  }
 }
 
 .p-remodal {

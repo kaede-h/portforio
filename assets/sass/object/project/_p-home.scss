@@ -237,6 +237,9 @@
     }
     &__body {
       margin: 64px 0 0;
+      @include mq(tablet){
+        margin: 32px 0 0;
+      }
       //リスト
       .list_work{
         display: flex;
