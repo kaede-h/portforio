@@ -199,6 +199,9 @@
   //私の仕事
   &__work {
     margin: 100px 0 200px;
+    @include mq(sp){
+      margin: 72px 0 100px;
+    }
     &__heading {
       .text{
         position: relative;
