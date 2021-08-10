@@ -4156,8 +4156,8 @@ Object [サイト全体で再利用できるパターンを持つモジュール
   margin: 16px 0 0;
 }
 .p-home__profile {
-  background: #F7F7F7;
-  padding: 64px 0 56px;
+  background: #f9f9f9;
+  padding: 56px 0 48px;
 }
 @media screen and (max-width: 768px) {
   .p-home__profile {
@@ -4189,7 +4189,8 @@ Object [サイト全体で再利用できるパターンを持つモジュール
   }
 }
 .p-home__profile__heading .title {
-  margin: 32px 0 0;
+  margin: 24px 0 0;
+  letter-spacing: 0.03em;
 }
 @media screen and (max-width: 768px) {
   .p-home__profile__heading .title {
@@ -4197,15 +4198,18 @@ Object [サイト全体で再利用できるパターンを持つモジュール
   }
 }
 .p-home__profile__body {
-  margin: 24px 0 0;
+  margin: 16px 0 0;
 }
 @media screen and (max-width: 768px) {
   .p-home__profile__body {
     margin: 18px 0 0;
   }
 }
+.p-home__profile__body .description {
+  text-align: center;
+}
 .p-home__profile__body .description p {
-  color: #656565;
+  color: #464646;
 }
 .p-home__fictitious {
   margin: 100px 0 0;
@@ -4292,13 +4296,13 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 }
 .p-home__fictitious__body .list_work > li .c-image {
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 1px solid #000;
 }
 .p-home__fictitious__body .list_work > li .c-image:hover {
   opacity: 0.8;
 }
 .p-home__work {
-  margin: 100px 0 200px;
+  margin: 100px 0 150px;
 }
 @media screen and (max-width: 480px) {
   .p-home__work {
@@ -4381,7 +4385,7 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 }
 .p-home__work__body .list_work > li .c-image {
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 1px solid #000;
 }
 .p-home__work__body .list_work > li .c-image:hover {
   opacity: 0.8;
@@ -4409,8 +4413,12 @@ Object [サイト全体で再利用できるパターンを持つモジュール
   position: relative;
 }
 .p-modal__heading .text .description {
-  margin: 12px 0 0;
+  margin: 12px 0 10px;
   color: #7b7b7b;
+}
+.p-modal__heading .text a {
+  text-decoration: underline;
+  color: #828282;
 }
 .p-modal__body {
   margin: 20px 0 0;

@@ -64,8 +64,8 @@
 	}
   //プロフィール 
 	&__profile {
-    background: #F7F7F7;
-    padding: 64px 0 56px;
+    background: #f9f9f9;
+    padding: 56px 0 48px;
     @include mq(tablet){
       padding: 42px 0 48px;
     }
@@ -89,7 +89,8 @@
         }
       }
       .title{
-        margin: 32px 0 0;
+        margin: 24px 0 0;
+        letter-spacing: 0.03em;
         @extend %c-text__lv3;
         @extend %c-text__weight--600;
         @include mq(tablet){
@@ -101,14 +102,15 @@
       }
     }
     &__body {
-      margin: 24px 0 0;
+      margin: 16px 0 0;
       @extend %c-text__lv7;
       @include mq(tablet){
         margin: 18px 0 0;
       }
       .description{
+        text-align: center;
         p{
-          color: #656565;
+          color: #464646;
           @extend %c-text__lv7;
         }
       }
@@ -187,7 +189,7 @@
           }
           .c-image{
             cursor: pointer;
-            border: 1px solid #ddd;
+            border: 1px solid #000;
             &:hover{
               opacity: 0.8;
             }
@@ -198,7 +200,7 @@
   }
   //私の仕事
   &__work {
-    margin: 100px 0 200px;
+    margin: 100px 0 150px;
     @include mq(sp){
       margin: 72px 0 100px;
     }
@@ -269,7 +271,7 @@
           }
           .c-image{
             cursor: pointer;
-            border: 1px solid #ddd;
+            border: 1px solid #000;
             &:hover{
               opacity: 0.8;
             }
