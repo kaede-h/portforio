@@ -4117,7 +4117,7 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 /* ! --------------------------------------------------
 -------------------------------------------------- */
 .p-home__view {
-  height: 750px;
+  height: 640px;
   background: url(../image/top_view.jpg) no-repeat center center !important;
   background-size: cover !important;
   display: flex;
@@ -4296,7 +4296,6 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 }
 .p-home__fictitious__body .list_work > li .c-image {
   cursor: pointer;
-  border: 1px solid #000;
 }
 .p-home__fictitious__body .list_work > li .c-image:hover {
   opacity: 0.8;
@@ -4385,10 +4384,19 @@ Object [サイト全体で再利用できるパターンを持つモジュール
 }
 .p-home__work__body .list_work > li .c-image {
   cursor: pointer;
-  border: 1px solid #000;
 }
 .p-home__work__body .list_work > li .c-image:hover {
   opacity: 0.8;
+}
+.p-home__footer {
+  background: #151515;
+  padding: 16px 0;
+}
+.p-home__footer .c-image {
+  text-align: center;
+}
+.p-home__footer .c-image img {
+  height: 16px;
 }
 
 /* ! --------------------------------------------------
